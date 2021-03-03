@@ -1,4 +1,10 @@
-import React, { useState, useCallback, useMemo, useRef }
+import React, { useState, useCallback, useMemo, useRef, useEffect } from React
+import axios from 'axios'
+import styled, { css } from 'styled-components'
+
+import Search from './Search'
+import TitleBar from './TitleBar'
+import Products from './Products'
 
 const App = (props) => {
 	var title = 'React 쇼핑몰'
@@ -31,4 +37,4 @@ const App = (props) => {
 	)
 }
 
-export default App;
+export default App
