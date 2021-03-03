@@ -1,10 +1,11 @@
-import React, { useState, useCallback, useMemo, useRef, useEffect } from React
+import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import axios from 'axios'
-import styled, { css } from 'styled-components'
 
 import Search from './Search'
 import TitleBar from './TitleBar'
 import Products from './Products'
+
+import styled, { css } from 'styled-components'
 
 const App = (props) => {
 	var title = 'React 쇼핑몰'
@@ -30,11 +31,11 @@ const App = (props) => {
 
 	return (
 		<div className="container">
-			<TitleBar query={query} title={title} className="my-4" />
+			<TitleBar query={query} title={title} />
 			<Search onChange={commitChange} />
 			<Products products={resultProducts} />
 		</div>
 	)
 }
 
-export default App
+export default App;

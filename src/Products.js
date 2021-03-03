@@ -1,12 +1,12 @@
-import React, { useState, useCallback, useMemo, useRef, useEffect } from React
+import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react'
+import Product from './Product'
 import styled from 'styled-components'
 
 const ListWrapper = styled.div`
-	display: flex;
-	flex-wrap: wrap;
+	display: flex; 
+	flex-wrap: wrap; 
 	margin: 1em 0;
 `
-
 
 const Products = (props) => {
 	return (
@@ -15,6 +15,5 @@ const Products = (props) => {
 		</ListWrapper>
 	)
 }
-
 
 export default Products

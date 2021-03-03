@@ -1,23 +1,25 @@
-import React, { useState, useCallback, useMemo, useRef, useEffect } from React
-
+import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react'
+import styled, { css } from 'styled-components'
 
 /* styled */
-const From = styled.form`
-	position: relitive;
+const Form = styled.form`
+	position: relative;
 `
-
-const Input = styled.form`
+const Input = styled.input`
 	padding: 0.75em;
 	height: 2.75em;
 `
 
 const RemoveButton = styled.i`
-	position: absolute;
-	right: 0.5em;
-	top: 0.55em;
-	font-size: 1.25em;
-	cursor: pointer;
+	position: absolute; 
+	right: 0.5em; 
+	top: 0.6em; 
+	font-size: 1.25em; 
+	cursor: pointer; 
 	color: #333;
+	&:hover {
+		color: #b90909;
+	}
 `
 
 
@@ -37,14 +39,14 @@ const Search = (props) => {
 		setQuery(value)
 	}
 	return (
-		<From>
-			<Input className="form-control py-2" type="text" onChange={handleChange} autoFocus value={query} ref={inputRef} />
+		<Form>
+			<Input className="form-control" type="text" onChange={handleChange} autoFocus value={query} ref={inputRef} />
 			{
 				query.length > 0
 				? <RemoveButton className="fa fa-times-circle" onClick={handleRemove} />
 				: ''
 			}
-		</From>
+		</Form>
 	)
 }
 
